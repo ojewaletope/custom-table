@@ -1,0 +1,21 @@
+<div class="table-bg">
+  <table class="data-table">
+    <thead class="data-table__headings">
+      <tr>
+        <th *ngFor="let map of columnMaps">{{ map.header }}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="data-table__body">
+      <tr class="data-table__row" *ngFor="let record of records">
+        <td class="data-table__row-col" *ngFor="let map of columnMaps">
+          {{
+            map.format
+              ? (record[map.primaryKey] | formatCell: map.format)
+              : record[map.primaryKey]
+          }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
