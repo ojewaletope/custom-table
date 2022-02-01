@@ -13,4 +13,8 @@ export const appTableSettings: ColumnSetting[] = [
     primaryKey: 'location',
     header: 'Location',
   },
+  {
+    primaryKey: 'state',
+    header: 'State',
+  },
 ];

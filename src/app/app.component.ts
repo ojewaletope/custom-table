@@ -20,13 +20,15 @@ export class AppComponent implements OnInit {
         id: 1,
         name: 'Tope Ojewale',
         age: 25,
-        location: 'Lagos',
+        location: 'Ikeja',
+        state: 'Lagos',
       },
       {
         id: 2,
         name: 'Ope Ojewale',
         age: 27,
         location: 'Lekki',
+        state: 'Ondo',
       },
     ];
   }
