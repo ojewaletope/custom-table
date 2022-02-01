@@ -7,7 +7,7 @@ import { ColumnSetting } from './table-models';
   styleUrls: ['./data-table.component.scss'],
 })
 export class DataTableComponent implements OnInit {
-  @Input() title!: string[]; // Table Title
+  @Input() title!: string; // Table Title
   @Input() records!: any[]; // Table Data
 
   @Input() settings?: ColumnSetting[]; // Table Configuration Settings

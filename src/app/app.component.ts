@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { appTableSettings } from './app.constants';
+import { UserService } from './user.service';
+import { User } from './model';
 
 @Component({
   selector: 'app-root',
@@ -10,26 +12,17 @@ export class AppComponent implements OnInit {
   title = 'custom-table';
   tableSettings = appTableSettings;
 
-  users!: any[];
+  users!: User[];
+
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    console.log(this.tableSettings);
+    this.getUsers();
+  }
 
-    this.users = [
-      {
-        id: 1,
-        name: 'Tope Ojewale',
-        age: 25,
-        location: 'Ikeja',
-        state: 'Lagos',
-      },
-      {
-        id: 2,
-        name: 'Ope Ojewale',
-        age: 27,
-        location: 'Lekki',
-        state: 'Ondo',
-      },
-    ];
+  getUsers() {
+    this.userService.getUsers().subscribe((users) => {
+      this.users = users;
+    });
   }
 }

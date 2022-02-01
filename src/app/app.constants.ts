@@ -6,15 +6,19 @@ export const appTableSettings: ColumnSetting[] = [
     header: 'Name',
   },
   {
-    primaryKey: 'age',
-    header: 'Age',
+    primaryKey: 'email',
+    header: 'Email',
   },
   {
-    primaryKey: 'location',
-    header: 'Location',
+    primaryKey: 'username',
+    header: 'Username',
   },
   {
-    primaryKey: 'state',
-    header: 'State',
+    primaryKey: 'phone',
+    header: 'Phone Number',
+  },
+  {
+    primaryKey: 'website',
+    header: 'Website',
   },
 ];
